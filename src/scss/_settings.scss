@@ -1,0 +1,126 @@
+
+//Переменные---------------------------------------------------------------------------------------------------------------------------
+$maxWidth: 1440px;
+$minWidth: 320px;
+$maxWidthContainer: 1200px;
+$md1: 1200px;
+$md3: 768px;
+$md4: 375px;
+$bgc: 222;
+$c: 222;
+
+//Миксины------------------------------------------------------------------------------------------------------------------------------
+@mixin tplbutton ($bc, $bbc){
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 53px;
+   color: $bc;
+   background-color: $bbc;
+   font-weight: 600;
+   font-size: 16px;
+   border: none;
+   box-shadow: 5px 5px .7 black;
+   border-radius: 5px;
+   font-family: $fontFamily;
+   @media (min-width: $md2){
+      &:hover{
+         transition: ease .45s;
+         color: $bbc;
+         background-color: $bc;
+      }
+   }
+}
+//Оболочка-----------------------------------------------------------------------------------------------------------------------------
+.wrapper{
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+//Основная сетка-----------------------------------------------------------------------------------------------------------------------
+._container{
+   max-width: $maxWidthContainer;
+   margin: 0 auto;
+
+   @media (max-width: $md1)
+   {
+      padding: 0 20px;
+   }
+
+   @media (max-width: $md2)
+   {
+      padding: 0 10px;
+   }
+
+   @media (max-width: $md3)
+   {   
+      padding: 0 10px;
+   }
+   @media (max-width: $md4)
+   {   
+      padding: 0 10px;
+   }
+}
+//Шрифт по умолчанию--------------------------------------------------------------------------------------------------------------------
+$fontFamily: "", sans-serif;
+body{
+   font-family: $fontFamily;
+   background-color: 222;
+}
+//-------Заголовки----------------------------------------------------------------------------------------------------------------------
+h1{
+   font-weight: 800;
+   font-size: 75px;
+   line-height: 93.75px;
+   margin: 0;
+   color: #ffffff;
+   @media (max-width:$md4){
+      font-size: 67px;
+   }
+}
+h2{
+   font-weight: 700;
+   font-size: 39px;
+   line-height: 50.7px;
+   margin: 0;
+   color: #ffffff;
+}
+h3{
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 26px;
+   color: #ffffff;
+   margin: 0;
+}
+h4{
+   color: #ffffff;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 19px;
+   margin: 0px 0px 0px 0px;
+}
+//----Текст-----------------------------------------------------------------------------------------------------------------------------
+._description{
+   font-family: $fontFamily;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 150%;
+   color: rgba($color: #ffffff, $alpha: .6);
+   @media (max-width: $md4){
+      font-size: 18px;
+   }
+}
+._description--popup{
+   font-family: $fontFamily;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 150%;
+   color: rgba($color: #000, $alpha: .6);
+   @media (max-width: $md4){
+      font-size: 18px;
+   }
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------
