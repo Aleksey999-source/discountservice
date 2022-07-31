@@ -1,14 +1,15 @@
 
-   .p{
-      font-family:'Times New Roman', Times, serif;
-      font-weight: 300;
-      font-size: 24px;
-   }
-
-.text{
-   p{
-      font-family: 'Gotham Pro', sans-serif;
-      font-weight: 300;
-      font-size: 24px;
+body{
+   .wrapper{
+      .page{
+         .button{
+            @include tplbutton1();
+            width: 214px;
+            height: 54px;
+         }
+         .button2{
+            @include tplbutton2();
+         }
+      }
    }
 }

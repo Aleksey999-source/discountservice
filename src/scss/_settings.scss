@@ -6,31 +6,79 @@ $maxWidthContainer: 1200px;
 $md1: 1200px;
 $md3: 768px;
 $md4: 375px;
-$bgc: 222;
-$c: 222;
+$bgc: #FFFFFF; // Основной цвет фона
+$ebgc: #1749B3; // Дополнительный цвет фона
+$c: #FFFFFF; // Основной цвет
+$bc: #FFFFFF; // цвет текста кнопки
+$bbc: #1749B3; // цвет фона кнопки
+$abc: #4B84FD; // цвет кнопки в активном состоянии
 
 //Миксины------------------------------------------------------------------------------------------------------------------------------
-@mixin tplbutton ($bc, $bbc){
+//Кнопки
+@mixin tplbutton1 (){
+   font-family: 'Gotham Pro';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 17px;
    display: flex;
    justify-content: center;
    align-items: center;
-   min-height: 53px;
    color: $bc;
    background-color: $bbc;
-   font-weight: 600;
-   font-size: 16px;
-   border: none;
-   box-shadow: 5px 5px .7 black;
-   border-radius: 5px;
+   border: solid 1px $bbc;
+   border-radius: 16px;
    font-family: $fontFamily;
-   @media (min-width: $md2){
+   @media (min-width: $md1){
       &:hover{
          transition: ease .45s;
-         color: $bbc;
+         color: #171717;
          background-color: $bc;
+      }
+
+      &:active{
+         transition: ease .45s;
+         color: $bc;
+         background-color: $abc;
+         border: solid 1px $abc;
       }
    }
 }
+
+@mixin tplbutton2 (){
+   font-family: 'Gotham Pro';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 17px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: $bc;
+   background-color: #333333;
+   border: solid 1px #333333;
+   border-radius: 16px;
+   font-family: $fontFamily;
+   @media (min-width: $md1){
+      &:hover{
+         transition: ease .45s;
+         color: #171717;
+         background-color: $bc;
+      }
+
+      &:active{
+         transition: ease .45s;
+         color: $bc;
+         background-color: #606060;
+         border: solid 1px #606060;
+      }
+   }
+}
+
+//Формы ----
+.password--input{
+   
+}
+
+
 //Оболочка-----------------------------------------------------------------------------------------------------------------------------
 .wrapper{
    width: 100%;
@@ -46,60 +94,40 @@ $c: 222;
 
    @media (max-width: $md1)
    {
-      padding: 0 20px;
+      padding: 0 32px;
    }
-
-   @media (max-width: $md2)
-   {
-      padding: 0 10px;
-   }
-
    @media (max-width: $md3)
    {   
-      padding: 0 10px;
+      padding: 0 32px;
    }
    @media (max-width: $md4)
    {   
-      padding: 0 10px;
+      padding: 0 24px;
    }
 }
 //Шрифт по умолчанию--------------------------------------------------------------------------------------------------------------------
-$fontFamily: "", sans-serif;
+$fontFamily: 'Gotham Pro';
 body{
    font-family: $fontFamily;
-   background-color: 222;
+   background-color: $bgc;
 }
 //-------Заголовки----------------------------------------------------------------------------------------------------------------------
 h1{
-   font-weight: 800;
-   font-size: 75px;
-   line-height: 93.75px;
-   margin: 0;
-   color: #ffffff;
-   @media (max-width:$md4){
-      font-size: 67px;
-   }
-}
-h2{
-   font-weight: 700;
-   font-size: 39px;
-   line-height: 50.7px;
-   margin: 0;
-   color: #ffffff;
-}
-h3{
-   font-weight: 700;
-   font-size: 20px;
-   line-height: 26px;
-   color: #ffffff;
-   margin: 0;
-}
-h4{
-   color: #ffffff;
+   font-family: 'Manrope';
+   font-style: normal;
    font-weight: 600;
    font-size: 16px;
-   line-height: 19px;
-   margin: 0px 0px 0px 0px;
+   line-height: 130%;
+   color: #171717;
+   text-align: center;
+}
+h2{
+   font-family: 'Gotham Pro';
+   font-weight: 700;
+   font-size: 25px;
+   line-height: 140%;
+   text-align: center;
+   color: #171717;
 }
 //----Текст-----------------------------------------------------------------------------------------------------------------------------
 ._description{
