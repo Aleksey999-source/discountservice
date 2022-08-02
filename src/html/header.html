@@ -1,3 +1,40 @@
 <header class="header">
+   <div class="header__container _container">
+      <a href="#" class="header__logo logo">
+         <picture>
+            <source type="image/avif" srcset="images/003_512@1x.avif 1x, images/003_512@2x.avif 2x, images/003_512@3x.avif 3x">
+            <source type="image/webp" srcset="images/003_512@1x.webp 1x, images/003_512@2x.webp 2x, images/003_512@3x.webp 3x">
+            <img class="logo-header" width="55" height="55"
+               src="images/003_512@1x.jpg"
+               srcset="images/003_512@2x.jpg 2x, images/003_512@3x.jpg 3x"
+               alt="логотип DiscountsOnServices">
+         </picture>
+         <div class="logo__name"><h1>DiscountsOnServices</h1></div>
+      </a>
+      <div class="header__menu menu">
+         <div class="menu__icon">
+            <span></span>
+         </div>
+         <nav class="menu__body">
+            <ul class="menu__list">
+               <div class="item__container">
+                  <li class="list__item--active">Subscriptions
+                     <ul class="sub-menu__list">
+                        <li><a href="#">Netflix</a></li>
+                        <li><a href="#">Youtube Premium</a></li>
+                        <li><a href="#">Spotify</a></li>
+                     </ul>
+                  </li>
+                  <div class="list__item--arrow">
+                     <img src="images/icons/icons.svg#arrow-header" class="svg-arrow-header-dims" alt="arrow-header" width="10" height="10"/>
+                  </div>
+               </div>
 
+               <li><a href="#" class="menu__link">FAQ</a></li>
+               <li><a href="#" class="menu__link">Support</a></li>
+               <li><a href="#" class="menu__link">About</a></li>
+            </ul>
+         </nav>
+      </div>
+   </div>
 </header>

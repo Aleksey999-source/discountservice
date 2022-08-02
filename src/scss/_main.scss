@@ -1,14 +1,47 @@
 
 body{
    .wrapper{
-      .page{
-         .button{
-            @include tplbutton1();
-            width: 214px;
-            height: 54px;
-         }
-         .button2{
-            @include tplbutton2();
+
+   }
+
+}
+
+.page__promo{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 740px;
+   .promo__content{
+      
+      padding: 114px 60px 114px 60px;
+      margin: 0px 16px 0px 0px;
+      border: none;
+      border-radius: 32px;
+      background-color: $ebgc;
+      width: 592px;
+      height: 500px;
+      .promo__title{
+         font-weight: 700;
+         font-size: 36px;
+         line-height: 140%;
+         color: $c;
+      }
+      .promo__text{
+
+      }
+      .promo__button{
+
+      }
+      & > *:not(:last-child){
+         margin: 0px 0px 40px 0px;
+      }
+   }
+   .promo__image{
+      picture{
+         .image-promo{
+            border-radius: 32px;
+            width: 592px;
+            height: 500px;
          }
       }
    }
