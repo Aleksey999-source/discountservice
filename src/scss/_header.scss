@@ -73,9 +73,47 @@ header{
             }
          }
       }
+      .header__activities{
+         display:flex;
+         justify-content: center;
+         align-items: center;
+         .header__social-links{
+            a{
+               img{
+                  width: 24px;
+                  height: 24px;
+               }
+            }
+         }
+         .header__page-language{
+            .laguage__body{
+               .language__list{
+                  .item__container{
+                     li{
+                        font-weight: 400;
+                        font-size: 16px;
+                        .sub-language__menu{
+                           li{
+                              font-size: 17px;
+                              font-weight: 400;
+                              line-height: 150%;
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+         .header__button{
+            button{
+               width: 136px;
+               height: 40px;
+            }
+         }
+      }
    }
 }
-
+//_________________________________body mouse_________________________________________
 body.mouse{
    .menu__body{
       .menu__list{
@@ -117,7 +155,6 @@ body.mouse{
             content: '';
             top: 0;
             left: 0;
-            outline: 1px solid red;
             z-index: 40;
             width: 125px;
             height: 60px;
@@ -136,7 +173,17 @@ body.mouse{
          }
       }
    }
+   .language__list{
+      .item__container{
+         &:hover{
+            .list__item--arrow{
+               transform: rotate(-180deg) translateY(-20%);
+            }
+         }
+      }
+   }
 }
+//_________________________________body touch_________________________________________
 body.touch{
    .menu__body{
       .menu__list{
@@ -172,6 +219,42 @@ body.touch{
                }
             }
          }
+      }
+   }
+}
+
+.header__activities{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   .header__social-links{
+      a{
+         img{
+            width: 24px;
+            height: 24px;
+         }
+      }
+   }
+   .header__page-language{
+      .laguage__body{
+         .language__list{
+            .item__container{
+               display: flex;
+               align-items: center;
+               li{
+                  .sub-language__menu{
+                     display: none;
+                  }
+               }
+            }  
+         }
+      }
+   }
+   .header__button{
+      button{
+         @include tplbutton1();
+         width: 136px;
+         height: 40px;
       }
    }
 }

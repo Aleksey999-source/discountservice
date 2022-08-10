@@ -51,13 +51,12 @@ $abc: #4B84FD; // цвет кнопки в активном состоянии
          color: #171717;
          background-color: $bc;
       }
-
-      &:active{
-         transition: ease .45s;
-         color: $bc;
-         background-color: $abc;
-         border: solid 1px $abc;
-      }
+   }
+   &:active{
+      transition: ease .45s;
+      color: $bc;
+      background-color: $abc;
+      border: solid 1px $abc;
    }
 }
 
@@ -80,13 +79,12 @@ $abc: #4B84FD; // цвет кнопки в активном состоянии
          color: #171717;
          background-color: $bc;
       }
-
-      &:active{
-         transition: ease .45s;
-         color: $bc;
-         background-color: #606060;
-         border: solid 1px #606060;
-      }
+   }
+   &:active{
+      transition: ease .45s;
+      color: $bc;
+      background-color: #606060;
+      border: solid 1px #606060;
    }
 }
 
